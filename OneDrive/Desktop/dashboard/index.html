@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Science Learning Dashboard | C. Shivacharan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --secondary:#7c3aed;
+    --accent:#22c55e;
+    --bg:#0f172a;
+    --glass:rgba(255,255,255,0.08);
+    --border:rgba(255,255,255,0.15);
+    --text:#e5e7eb;
+    --muted:#94a3b8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:var(--text);
+}
+
+/* HEADER */
+header{
+    padding:40px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+/* SECTION TITLE */
+.section-title{
+    text-align:center;
+    margin:50px 0 20px;
+    font-size:1.6rem;
+    color:#e5e7eb;
+}
+
+/* GRID CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:var(--glass);
+    backdrop-filter:blur(14px);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:22px;
+    position:relative;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h2{
+    font-size:1.1rem;
+    margin-bottom:12px;
+}
+
+/* PROGRESS */
+.progress{
+    background:rgba(255,255,255,0.15);
+    height:14px;
+    border-radius:30px;
+    margin-bottom:15px;
+    overflow:hidden;
+}
+.progress-bar{
+    height:100%;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+/* LIST */
+ul{list-style:none;}
+ul li{
+    font-size:0.9rem;
+    margin-bottom:8px;
+}
+ul li::before{
+    content:"✔ ";
+    color:var(--accent);
+}
+
+/* LINKS */
+a{
+    color:#93c5fd;
+    text-decoration:none;
+}
+a:hover{color:#38bdf8;}
+
+/* BADGE */
+.badge{
+    position:absolute;
+    top:16px;
+    right:16px;
+    font-size:0.7rem;
+    padding:4px 10px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.15);
+    color:#4ade80;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    color:var(--muted);
+    font-size:0.85rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📊 Data Science Learning Dashboard</h1>
+<p>Track • Learn • Build • Deploy</p>
+</header>
+
+<!-- ================= LEARNING SECTION ================= -->
+<h2 class="section-title">📚 Learning & Tools</h2>
+
+<div class="container">
+
+<div class="card">
+<span class="badge">Beginner</span><br>
+<h2>📘 Data Science Fundamentals</h2><br>
+<div class="progress"><div class="progress-bar" style="width:20%"></div></div>
+<ul>
+<li><a href="https://www.ibm.com/topics/data-science" target="_blank">IBM – What is Data Science</a></li>
+<li><a href="https://www.youtube.com/watch?v=X3paOmcrTjQ" target="_blank">Simplilearn Overview</a></li>
+</ul>
+</div>
+
+<div class="card">
+<span class="badge">Tools</span>
+<h2>📊 Excel for Data Analysis</h2><br>
+<div class="progress"><div class="progress-bar" style="width:40%"></div></div>
+<ul>
+<li><a href="https://www.youtube.com/@ExcelIsFun" target="_blank">ExcelIsFun</a></li>
+<li><a href="https://www.kaggle.com/datasets" target="_blank">Kaggle Datasets</a></li>
+</ul>
+</div>
+
+<div class="card">
+<span class="badge">Core</span>
+<h2>📐 Statistics & Probability</h2>
+<div class="progress"><div class="progress-bar" style="width:30%"></div></div>
+<ul>
+<li><a href="https://www.youtube.com/@statquest" target="_blank">StatQuest</a></li>
+</ul>
+</div>
+
+<div class="card">
+<span class="badge">Programming</span><br>
+<h2>🐍 Python for Data Science</h2><br>
+<div class="progress"><div class="progress-bar" style="width:50%"></div></div>
+<ul>
+<li><a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a></li>
+<li><a href="https://www.youtube.com/@krishnaik06" target="_blank">Krish Naik</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🗄️ SQL for Data Science</h2>br
+<div class="progress"><div class="progress-bar" style="width:30%"></div></div>
+<ul>
+<li><a href="https://sqlbolt.com/" target="_blank">SQLBolt</a></li>
+<li><a href="https://mode.com/sql-tutorial/" target="_blank">Mode SQL</a></li>
+<li><a href="https://leetcode.com/problemset/database/" target="_blank">LeetCode SQL</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<h2 class="section-title">🚀 Data Science & ML Projects</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>📊 Student Performance Analysis</h2>
+<ul>
+<li><strong>Skills:</strong> EDA, Statistics</li>
+<li><a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank">Dataset</a></li>
+<li><a href="https://www.youtube.com/watch?v=xi0vhXFPegw" target="_blank">EDA Tutorial</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💰 Sales Data Analysis Dashboard</h2>
+<ul>
+<li><strong>Skills:</strong> SQL, Power BI</li>
+<li><a href="https://www.kaggle.com/datasets/kyanyoga/sample-sales-data" target="_blank">Dataset</a></li>
+<li><a href="https://learn.microsoft.com/power-bi/" target="_blank">Power BI Learn</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>📉 Customer Churn Prediction</h2>
+<ul>
+<li><strong>Skills:</strong> Classification</li>
+<li><a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn" target="_blank">Dataset</a></li>
+<li><a href="https://www.youtube.com/@statquest" target="_blank">StatQuest ML</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🏠 House Price Prediction</h2>
+<ul>
+<li><strong>Skills:</strong> Regression</li>
+<li><a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques" target="_blank">Dataset</a></li>
+<li><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank">Scikit-learn</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💳 Credit Card Fraud Detection</h2>
+<ul>
+<li><strong>Skills:</strong> Imbalanced Data</li>
+<li><a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Dataset</a></li>
+<li><a href="https://www.youtube.com/@statquest" target="_blank">Evaluation</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎯 Recommendation System</h2>
+<ul>
+<li><strong>Skills:</strong> Similarity</li>
+<li><a href="https://grouplens.org/datasets/movielens/" target="_blank">MovieLens</a></li>
+<li><a href="https://www.youtube.com/watch?v=7E3OZ3S7T1Y" target="_blank">Tutorial</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🧠 Sentiment Analysis</h2>
+<ul>
+<li><strong>Skills:</strong> NLP</li>
+<li><a href="https://www.kaggle.com/datasets/kazanova/sentiment140" target="_blank">Dataset</a></li>
+<li><a href="https://www.youtube.com/@krishnaik06" target="_blank">NLP Guide</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>⏳ Time Series Forecasting</h2>
+<ul>
+<li><strong>Skills:</strong> ARIMA</li>
+<li><a href="https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption" target="_blank">Dataset</a></li>
+<li><a href="https://www.youtube.com/watch?v=Prpu_U6gS1U" target="_blank">Tutorial</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🖼️ Image Classification</h2>
+<ul>
+<li><strong>Skills:</strong> CNN</li>
+<li><a href="https://www.kaggle.com/c/dogs-vs-cats" target="_blank">Dataset</a></li>
+<li><a href="https://www.tensorflow.org/tutorials/images/classification" target="_blank">TensorFlow</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🚀 ML Deployment</h2>
+<ul>
+<li><strong>Skills:</strong> Flask, Deployment</li>
+<li><a href="https://www.youtube.com/watch?v=UbCWoMf80PY" target="_blank">Flask Deployment</a></li>
+<li><a href="https://render.com/docs" target="_blank">Render Docs</a></li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+© 2025 | Data Science Dashboard – C. Shivacharan
+</footer>
+
+</body>
+</html>
